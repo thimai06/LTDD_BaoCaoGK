@@ -17,9 +17,22 @@ public class signupActivity extends AppCompatActivity {
     private TextView txtDnh;
     private Button btndky;
     String txtPass,txtMail;
-    ArrayList<User> arrayList;
 
+    private final int SIGNUPSUCCESS =0;
+    private final int GMAIL_EXISTS =1;
+    private final int WRONG_CONFIRM_PASSWORDS =2;
 
+    private int checkSignUp(String gmail,String passwords,String confirmpasswords){
+        if(!passwords.equals(confirmpasswords)){
+            return WRONG_CONFIRM_PASSWORDS;
+        }
+        for (User user:MainActivity.listUsers) {
+            if(user.getEmail().equals(gmail)){
+                return GMAIL_EXISTS;
+            }
+        }
+        return SIGNUPSUCCESS;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +43,7 @@ public class signupActivity extends AppCompatActivity {
         txtPassdky =findViewById(R.id.pass);
         txtconfimPass = findViewById(R.id.pass1);
 
-        arrayList = new ArrayList<>();
+
         btndky =findViewById(R.id.btndky);
         btndky.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,21 +51,18 @@ public class signupActivity extends AppCompatActivity {
                 Bundle bundle=new Bundle();
                 String pass= txtPassdky.getText().toString().trim();
                 String confimpass = txtconfimPass.getText().toString().trim();
-                if(pass.equals(confimpass)){
-                    txtPass = txtPassdky.getText().toString().trim();
-                    txtMail=txtGmaildky.getText().toString();
-                    User user=new User(txtMail,txtPass);
-                    arrayList.add(user);
-
-                    Toast.makeText(getApplicationContext(),"Đăng ký thành công",Toast.LENGTH_SHORT).show();
-                    Intent intent = new  Intent(signupActivity.this, MainActivity.class);
-                    intent.putExtra("gmail",arrayList.get(arrayList.size()-1).getEmail());
-                    intent.putExtra("password",arrayList.get(arrayList.size()-1).getPassword());
+                String gmail=txtGmaildky.getText().toString();
+                int resultSignUp= checkSignUp(gmail,pass,confimpass);
+                if(resultSignUp == SIGNUPSUCCESS){
+                    Toast.makeText(getApplicationContext(),"Đăng ky thành công",Toast.LENGTH_SHORT).show();
+                    MainActivity.listUsers.add(new User(pass,gmail));
+                    Intent intent = new Intent(signupActivity.this,MainActivity.class);
                     startActivity(intent);
                     finish();
-                }
-                else {
-                    Toast.makeText(getApplicationContext(),"Đăng ký không thành công",Toast.LENGTH_SHORT).show();
+                }else if(resultSignUp == GMAIL_EXISTS){
+                    Toast.makeText(getApplicationContext(),"Tài khoản đã tồn tại",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getApplicationContext(),"Xác nhận mật khẩu không đúng",Toast.LENGTH_SHORT).show();
                 }
             }
         });
