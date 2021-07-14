@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:padding="16dip"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="100px"
+            android:textSize="80px"
+            android:gravity="center"
+            android:textColor="#5f9ea0"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:text="ĐĂNG KÝ"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/gmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#808080"
+            android:background="@drawable/round_border"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="20px"
+            android:ems="10"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:hint="Nhập gmail"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColorHint="#808080"
+            android:textColor="@color/black"
+            android:background="@drawable/round_border"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="20px"
+            android:ems="10"
+            android:textStyle="italic"
+            android:hint="Nhập mật khẩu"
+            android:inputType="textPassword"
+            android:padding="20dp" />
+
+        <EditText
+            android:id="@+id/pass1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_border"
+            android:textColorHint="#808080"
+            android:textStyle="italic"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="20px"
+            android:ems="10"
+            android:hint="Nhập lại mật khẩu"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            android:padding="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginRight="8dip"
+            android:text=""/>
+        <TextView
+
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginRight="8dip"
+            android:text=""/>
+        <TextView
+
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginRight="8dip"
+            android:text=""/>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btndky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:background="@drawable/round_border"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="Đăng Ký" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dnh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30px"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="	#000080"
+            android:textStyle="italic"
+            android:text="Đăng Nhập ?"/>
+
+    </LinearLayout>
+
+</LinearLayout>

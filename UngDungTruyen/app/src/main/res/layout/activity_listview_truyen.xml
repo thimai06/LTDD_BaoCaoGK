@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#FFDDDDDD"
+    tools:context=".ListViewTruyenActivity">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:gravity="center"
+        android:text="Danh Sách Truyện"
+        android:layout_marginBottom="10dp"
+        android:textColor="#03756A"
+        android:textSize="30dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/listviewactivity_btn_add"
+            android:text="Thêm"
+            android:layout_marginLeft="20sp"
+            >
+
+        </Button>
+
+    <ListView
+        android:id="@+id/listviewtruyen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="1dp" />
+    </LinearLayout>
+</LinearLayout>

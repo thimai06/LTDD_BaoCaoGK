@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFDDDDDD"
+
+
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/im_avata"
+            />
+    </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="Tên Truyện"
+                android:textColor="#021C2E"
+                android:textSize="20sp" />
+
+            <TextView
+            android:id="@+id/tacgia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Tác Giả"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#03756A"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/theloai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Thể Loại:"
+            android:textColor="#03756A"
+            android:textSize="15sp" />
+    </LinearLayout>
+      </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20sp">
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+
+            android:layout_marginTop="0px"
+            android:text="Tóm tắt truyện"
+            android:textColor="#5BAEE4"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/gioithieu"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Chỗ này ghi nội dung giới thiệu"
+            android:textColor="#021C2E"
+            android:textSize="13sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Chỉnh sửa"
+            android:textSize="10sp"
+            android:layout_marginBottom="0dp">
+        </Button>
+    <Button
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Đọc Truyện"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="10sp"
+        android:layout_marginBottom="0dp">
+    </Button>
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Xóa"
+            android:textSize="10sp"
+            android:layout_marginBottom="0dp">
+        </Button>
+    </LinearLayout>
+</LinearLayout>
+
+
